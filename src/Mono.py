@@ -14,7 +14,7 @@ class Mono(RequestCall, MonoUser):
         :return:
         """
         data, status = self.req_call("POST", '/auth', data=self.payload)
-        if status == "400":
+        if isinstance("400", status):
             return data
         else:
             # self.user_id = data['id']
@@ -26,7 +26,7 @@ class Mono(RequestCall, MonoUser):
         :return:
         """
         data, status = self.req_call("GET", self.GetUserId())
-        if status == "400":
+        if isinstance("400", status):
             return data
         else:
             return data
@@ -37,7 +37,7 @@ class Mono(RequestCall, MonoUser):
         :return:
         """
         data, status = self.req_call("GET", f'{self.GetUserId()}/transactions')
-        if status == "400":
+        if isinstance("400", status):
             return data
         else:
             return data
@@ -55,7 +55,7 @@ class Mono(RequestCall, MonoUser):
         :return:
         """
         data, status = self.req_call("GET", f'{self.GetUserId()}/credits')
-        if status == "400":
+        if isinstance("400", status):
             return data
         else:
             return data
@@ -66,7 +66,7 @@ class Mono(RequestCall, MonoUser):
         :return:
         """
         data, status = self.req_call("GET", f"{self.GetUserId()}/debits")
-        if status == "400":
+        if isinstance("400", status):
             return data
         else:
             return data
@@ -77,7 +77,7 @@ class Mono(RequestCall, MonoUser):
         :return:
         """
         data, status = self.req_call("GET", f'{self.GetUserId()}/identity')
-        if status == "400":
+        if isinstance("400", status):
             return data
         else:
             return data
