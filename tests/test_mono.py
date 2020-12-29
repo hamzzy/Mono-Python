@@ -5,7 +5,7 @@ class TestMono(TestCase):
 
     def setUp(self) -> None:
         super(TestMono, self).setUp()
-        self.mono = Mono.Mono(code='has7tgas7t73')
+        self.mono = Mono.Mono(code=" ")
         # self.user_id = self.mono.GetUserId()
 
     def test_mono_key(self):
