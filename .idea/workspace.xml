@@ -10,7 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="c26dd79b-81af-4772-9627-36d1f37a67ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mono.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mono.py" afterDir="false" />
+    </list>
+=======
     <list default="true" id="c26dd79b-81af-4772-9627-36d1f37a67ea" name="Default Changelist" comment="" />
+>>>>>>> e882e240d2281b5d8a82eddf4d38b836cc1402b3
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,8 +136,12 @@
       <option name="presentableId" value="Default" />
       <updated>1609038442973</updated>
       <workItem from="1609038446549" duration="9437000" />
+<<<<<<< HEAD
+      <workItem from="1609193839891" duration="1526000" />
+=======
       <workItem from="1609193839891" duration="1748000" />
       <workItem from="1609249550325" duration="355000" />
+>>>>>>> e882e240d2281b5d8a82eddf4d38b836cc1402b3
     </task>
     <servers />
   </component>
