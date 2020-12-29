@@ -28,3 +28,9 @@ Still in Development Phase
   mono.Auth()
   ........
 ```
+
+## Todo
+- complete unit test
+- Travis integration
+- publish to pypi
+- test with API from Mono 
