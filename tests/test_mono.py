@@ -12,9 +12,9 @@ class TestMono(TestCase):
 
     def setUp(self) -> None:
         super(TestMono, self).setUp()
-        self.mono = Mono.Mono()
-        data = self.mono.Auth(code=" ")
-        self.mono.SetUserId(data[0].get('id'))
+        self.mono = Mono.Mono(code=" ")
+        (data,status)= self.mono.Auth()
+        self.mono.SetUserId(data.get('id'))
 
     def test_mono_key(self):
         self.assertNotEqual(test_mono_key, "Missing Authorization key argument or env variable")
@@ -46,7 +46,6 @@ class TestMono(TestCase):
 
         (data,status)= self.mono.getStatement("last6month")
         self.assertEqual(status, 200)
-        print(data)
 
 
     # def test_mono_bvn_lookup(self):

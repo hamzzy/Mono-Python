@@ -5,16 +5,17 @@ from pymono import MonoUser
 
 class Mono(BaseAPI, MonoUser):
 
-    def __init__(self):
+    def __init__(self,code):
+        self.code=code
         super().__init__()
 
-    def Auth(self, code):
+    def Auth(self):
         """
         This function Authenticate  the API with key from mono
         :return: user_id
         """
 
-        return self._handle_request("POST", 'account/auth', data=code)
+        return self._handle_request("POST", 'account/auth', data=self.code)
 
     def getAccount(self) -> dict:
         """

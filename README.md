@@ -1,41 +1,45 @@
-# Mono-Python
-A simple python wrapper for MonoAPI (https://mono.co)
+# PyMono
+pymono is a python wrapper for <a href="https://mono.co"> Mono </a>
+
+- Account
+- Transactions
+- Statements
+- Credits
+- Debits
+- Bvn Lookup
 
 
-## Guide
+## Getting Started
 
-Register on Mono  website and get your Authorization key.
-
-Still in Development Phase
-
-# Built with 
-- Python 3.x
-   
+- Register on <a href="https://mono.co"> Mono </a>  website and get your Authorization key.
+- Setup your mono connect with your mono public key
+  
 
 
+## Installing
 ```python
      pip install  ??
 ```
 
+
+# Usage
 ```python
-  usage
 
   from pymono import Mono
   mono=Mono('MONO-CONNECT-ID')
 
-# Authenticate Mono api key  and use mono conncet id 
-  data=mono.Auth()
-  mono.SetUserId(data.get('id'))
+  # Authenticate Mono api key  and use mono conncet id 
+  data,status=mono.Auth('')
 
-# return  the account of a user id gotten from mono
-  mono.GetAccount()
-
+# return  status and json data
+  data,status=mono.getAccount()
   ........
 ```
 
+## Sanbox to test  mono-connect
+<!-- - React js   <a href="https://codesandbox.io/s/laughing-wildflower-0te1o?file=/src/App.js">sandbox</a> from Mono -->
+- 
 ## Todo
-- complete unit test
-- Travis integration
 - publish to pypi
-- Test with API access from Mono 
 - Support Webhook
+- Documentation
