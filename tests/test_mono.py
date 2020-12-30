@@ -13,7 +13,7 @@ class TestMono(TestCase):
     def setUp(self) -> None:
         super(TestMono, self).setUp()
         self.mono = Mono.Mono()
-        data = self.mono.Auth(code="code_vKMnyzQooVnFvEZf0U2k")
+        data = self.mono.Auth(code=" ")
         self.mono.SetUserId(data[0].get('id'))
 
     def test_mono_key(self):
