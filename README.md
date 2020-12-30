@@ -2,7 +2,7 @@
 A simple python wrapper for MonoAPI (https://mono.co)
 
 
-## Installation
+## Guide
 
 Register on Mono  website and get your Authorization key.
 
