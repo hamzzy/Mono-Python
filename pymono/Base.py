@@ -7,7 +7,8 @@ from pymono.Errors import MissingAuthKeyError, InvalidMethodError,Error
 
 
 class BaseAPI(object):
-    _BASE_URL = "https://api.withmono.com/account/"
+    _BASE_URL = "https://api.withmono.com/
+    
     _CONTENT_TYPE = 'application/json'
 
     def __init__(self):
