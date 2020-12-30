@@ -18,9 +18,9 @@ class InvalidMethodError(PyMonoError):
     """
     pass
 
+
 class Error(PyMonoError):
-     """
+    """
      Random exception  taker
      """
-     pass
-
+    pass
