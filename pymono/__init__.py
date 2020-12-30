@@ -1,1 +1,3 @@
-from .Base import BaseAPI, MonoUser
+from .Base import BaseAPI
+from .User import MonoUser
+
