@@ -28,12 +28,13 @@ pymono is a python wrapper for <a href="https://mono.co"> Mono </a>
   from pymono import Mono
   mono=Mono('MONO-CONNECT-ID')
 
-  # Authenticate Mono api key  and use mono conncet id 
-  data,status=mono.Auth('')
-
-# return  status and json data
-  data,status=mono.getAccount()
-  ........
+   # Authenticate Mono api key  and use mono conncet id 
+   data,status=mono.Auth()
+   #set user id 
+   mono.SetUserId(data.get('id'))
+   # return  status and json data
+   mono.getAccount()
+   ........
 ```
 
 ## Sanbox to test  mono-connect
