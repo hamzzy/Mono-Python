@@ -14,8 +14,7 @@ Still in Development Phase
 
 
 ```python
-
-     pip install -U  ??
+     pip install  ??
 ```
 
 ```python
@@ -25,7 +24,12 @@ Still in Development Phase
   mono=Mono('MONO-CONNECT-ID')
 
 # Authenticate Mono api key  and use mono conncet id 
-  mono.Auth()
+  data=mono.Auth()
+  mono.SetUserId(data.get('id'))
+
+# return  the account of a user id gotten from mono
+  mono.GetAccount()
+
   ........
 ```
 
@@ -33,4 +37,5 @@ Still in Development Phase
 - complete unit test
 - Travis integration
 - publish to pypi
-- test with API from Mono 
+- Test with API access from Mono 
+- Support Webhook
