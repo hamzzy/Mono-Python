@@ -1,4 +1,4 @@
-from . import Mono, BaseAPI, TestCase, main, test_mono_key
+from . import Mono, TestCase, main, test_mono_key
 
 
 def assertUUid(uuid):
@@ -13,7 +13,7 @@ class TestMono(TestCase):
     def setUp(self) -> None:
         super(TestMono, self).setUp()
         self.mono = Mono.Mono(code="")
-        (data,status)= self.mono.Auth()
+        (data, status) = self.mono.Auth()
         self.mono.SetUserId(data.get('id'))
 
     def test_mono_key(self):
@@ -47,7 +47,7 @@ class TestMono(TestCase):
         self.assertEqual(status, 200)
 
     def test_mono_getStatement_pdf(self):
-        (data, status) = self.mono.getStatement("last6month",output="pdf")
+        (data, status) = self.mono.getStatement("last6month", output="pdf")
         self.assertEqual(status, 201)
 
     # def test_mono_bvn_lookup(self):

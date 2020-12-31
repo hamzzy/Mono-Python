@@ -1,3 +1,4 @@
+The MIT License (MIT)
 
 
 Copyright 2020 Ibrahim Hamzat
