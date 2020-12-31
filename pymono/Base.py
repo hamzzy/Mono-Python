@@ -38,6 +38,10 @@ class BaseAPI(object):
     def _url(self, path):
         return self._BASE_URL + path
 
+    def _poll_status(self, data, user_id):
+        (data_poll, status_poll) = self._handle_request('GET', f" accounts/{user_id}/statement/jobs/{data.get('id')}")
+        return data_poll, status_poll
+
     def _handle_request(self, method_type, url, data=None, params=None):
 
         """
@@ -45,10 +49,11 @@ class BaseAPI(object):
         Returns a python tuple of status code,data
         """
 
-        payload = json.dumps({"code": data })
-        param = {'period': params}
+        payload = json.dumps({"code": data})
+
         try:
-            response = requests.request(url=self._url(url), method=method_type, headers=self.header(), data=payload,params=param)
+            response = requests.request(url=self._url(url), method=method_type, headers=self.header(),
+                                        data=payload, params=params)
             if response.status_code == 400:
                 return self.parse_json(response)
 
