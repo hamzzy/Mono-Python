@@ -5,10 +5,11 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='Py-mono',
-    version='0.0.1',
+    
+    version='0.1.0',
     author='Ibrahim Hamzat',
     author_email='hamat.ibrahim3@gmail.com',
-    description="A fintech  data aggregator api wrapper package",
+    description="Mono.co Python API wrapper",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/hamzzy/Mono-Python",
