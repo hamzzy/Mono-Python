@@ -4,11 +4,11 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name='Mono_Python',
+    name='Py-mono',
     version='0.0.1',
     author='Ibrahim Hamzat',
     author_email='hamat.ibrahim3@gmail.com',
-    description="A mono client package",
+    description="A fintech  data aggregator api wrapper package",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/hamzzy/Mono-Python",

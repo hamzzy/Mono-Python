@@ -13,28 +13,30 @@ pymono is a python wrapper for <a href="https://mono.co"> Mono </a>
 
 - Register on <a href="https://mono.co"> Mono </a>  website and get your Authorization key.
 - Setup your mono connect with your mono public key
-  
+- Set Your "MONO-SEC-KEY" env
 
 
 ## Installing
 ```python
-     pip install  ??
+   pip install  Py-mono
 ```
 
 
 # Usage
 ```python
 
-  from pymono import Mono
-  mono=Mono('MONO-CONNECT-ID')
+    os.environ['MONO-SEC-KEY'] = " "
 
-   # Authenticate Mono api key  and use mono conncet id 
-   data,status=mono.Auth()
-   #set user id 
-   mono.SetUserId(data.get('id'))
-   # return  status and json data
-   mono.getAccount()
-   ........
+    from pymono import Mono
+    mono=Mono('MONO-CONNECT-ID')
+
+    # Authenticate Mono api key  and use mono conncet id
+    data,status=mono.Auth()
+    #set user id
+    mono.SetUserId(data.get('id'))
+    # return  status and json data
+    mono.getAccount()
+
 ```
 
 ## Sanbox to test  mono-connect
