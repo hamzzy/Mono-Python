@@ -37,7 +37,7 @@ class Mono(BaseAPI, MonoUser):
 
 
         """
-        params = {"start": start, end: "end", "narration": narration, "type": types, "paginate": paginate}
+        params = {"start": start, "end":end, "narration": narration, "type": types, "paginate": paginate}
         return self._handle_request("GET", f'accounts/{self.GetUserId()}/transactions', params=params)
 
     def getStatement(self, month, output="json"):
@@ -56,7 +56,7 @@ class Mono(BaseAPI, MonoUser):
         else:
             return self._handle_request('GET', f"accounts/{self.GetUserId()}/statement", params=params)
 
-    def getUserCredits(self):
+    def getCredits(self):
         """
         This function get a User Credits history
         :return: json data of a user credits
@@ -64,7 +64,7 @@ class Mono(BaseAPI, MonoUser):
 
         return self._handle_request("GET", f"accounts/{self.GetUserId()}/credits")
 
-    def getUserDebits(self):
+    def getDebits(self):
         """
         This function get  a User Debits history
         :return: json data of a user debits history
@@ -72,7 +72,7 @@ class Mono(BaseAPI, MonoUser):
 
         return self._handle_request("GET", f"accounts/{self.GetUserId()}/debits")
 
-    def getUserIdentity(self):
+    def getIdentity(self):
         """
         This function get a User Identity
         :return: json data of user identity
