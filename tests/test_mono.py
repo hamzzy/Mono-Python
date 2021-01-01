@@ -12,7 +12,7 @@ class TestMono(TestCase):
 
     def setUp(self) -> None:
         super(TestMono, self).setUp()
-        self.mono = Mono.Mono(code="")
+        self.mono = Mono.Mono(code="code_VRoL5GFfRnUnujcfC33O")
         (data, status) = self.mono.Auth()
         self.mono.SetUserId(data.get('id'))
 
@@ -27,19 +27,23 @@ class TestMono(TestCase):
         self.assertEqual(status, 200)
 
     def test_mono_Transaction(self):
-        (data, status) = self.mono.getAccount()
+        (data, status) = self.mono.getTransactions()
+        self.assertEqual(status, 200)
+
+    def test_mono_Transaction_with_filter(self):
+        (data, status) = self.mono.getTransactions(start="01-10-2020",end="10-10-2020",types="credit")
         self.assertEqual(status, 200)
 
     def test_mono_UserCredits(self):
-        (data, status) = self.mono.getUserCredits()
+        (data, status) = self.mono.getCredits()
         self.assertEqual(status, 200)
 
     def test_mono_UserDebits(self):
-        (data, status) = self.mono.getUserDebits()
+        (data, status) = self.mono.getDebits()
         self.assertEqual(status, 200)
 
     def test_mono_UserIdentity(self):
-        (data, status) = self.mono.getUserIdentity()
+        (data, status) = self.mono.getIdentity()
         self.assertEqual(status, 200)
 
     def test_mono_getStatement(self):
