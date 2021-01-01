@@ -12,7 +12,7 @@ class TestMono(TestCase):
 
     def setUp(self) -> None:
         super(TestMono, self).setUp()
-        self.mono = Mono.Mono(code="code_VRoL5GFfRnUnujcfC33O")
+        self.mono = Mono(code=" ")
         (data, status) = self.mono.Auth()
         self.mono.SetUserId(data.get('id'))
 
@@ -62,3 +62,4 @@ class TestMono(TestCase):
 
 if __name__ == '__main__':
     main()
+
