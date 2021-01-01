@@ -18,8 +18,8 @@ pymono is a python wrapper for <a href="https://mono.co"> Mono </a>
 
 ## Installing
 ```python
-   pip install Py-Mono==0.0.1 
-     
+   pip install -U Py-Mono
+
 ```
 
 
