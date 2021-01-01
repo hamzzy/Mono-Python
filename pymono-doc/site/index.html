@@ -64,6 +64,26 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#exchange-key-or-authenticaton">Exchange Key or Authenticaton</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#user-id">User Id</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#statement">Statement</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#account">Account</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#transactions">Transactions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#statement_1">Statement</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#credits">Credits</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#debits">Debits</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#identity">Identity</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#bvn-lookup">BVN Lookup</a>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     </ul>
@@ -121,8 +141,110 @@
 <pre><code class="language-python">   from pymono import Mono
 </code></pre>
 <h5 id="exchange-key-or-authenticaton">Exchange Key or Authenticaton</h5>
-<pre><code class="language-python">    mono= Mono('mono-code')
-    mono.Auth()
+<pre><code class="language-python">   mono= Mono('mono-code')
+   data,status = mono.Auth()
+</code></pre>
+<h3 id="user-id">User Id</h3>
+<blockquote>
+<p>set the user id to get other function working</p>
+</blockquote>
+<pre><code class="language-python">   mono.SetUserId(data.get('id))
+</code></pre>
+<h4 id="statement">Statement</h4>
+<blockquote>
+<p>The user statement of account is returned</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">params</th>
+<th align="center">example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">month</td>
+<td align="center">last6month,last12month</td>
+</tr>
+<tr>
+<td align="left">output</td>
+<td align="center">json, pdf</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">   mono.getStatement()  
+</code></pre>
+<h4 id="account">Account</h4>
+<blockquote>
+<p>The user account details is returned</p>
+</blockquote>
+<pre><code class="language-python">   mono.getAccount()
+</code></pre>
+<h4 id="transactions">Transactions</h4>
+<blockquote>
+<p>return user transaction all transactions without filter  return all the  </p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">params</th>
+<th align="center">example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">start</td>
+<td align="center">"1-10-2020"</td>
+</tr>
+<tr>
+<td align="left">end</td>
+<td align="center">"7-11-2020"</td>
+</tr>
+<tr>
+<td align="left">narration</td>
+<td align="center">uber etc</td>
+</tr>
+<tr>
+<td align="left">types</td>
+<td align="center">debit, credit</td>
+</tr>
+<tr>
+<td align="left">paginate</td>
+<td align="center">true ,false</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">
+   #Get all the transactions without filter
+   mono.getTransactions()
+
+   #Parameter accepted  to  filter  Transaction  
+   mono.getTransactions(start=&quot;&quot;,end=&quot; &quot;,narration=&quot;&quot;,types=&quot;&quot;,paginate=&quot;&quot;)
+</code></pre>
+<h4 id="statement_1">Statement</h4>
+<pre><code class="language-python">   mono.getStatement()
+   #p
+
+</code></pre>
+<h4 id="credits">Credits</h4>
+<pre><code class="language-python">   mono.getCredits()
+   #p
+
+</code></pre>
+<h4 id="debits">Debits</h4>
+<pre><code class="language-python">   mono.getDebits()
+   #p
+
+</code></pre>
+<h4 id="identity">Identity</h4>
+<pre><code class="language-python">   mono.getIdentity()
+   #p
+
+</code></pre>
+<h4 id="bvn-lookup">BVN Lookup</h4>
+<pre><code class="language-python">   mono.bvn_lookup()
+   #p
+
 </code></pre>
               
             </div>
@@ -168,5 +290,5 @@
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-12-31 15:41:59.249684+00:00
+Build Date UTC : 2021-01-01 00:18:27.624787+00:00
 -->
