@@ -54,14 +54,9 @@ class BaseAPI(object):
         try:
             response = requests.request(url=self._url(url), method=method_type, headers=self.header(),
                                         data=payload, params=params)
-            if response.status_code == 400:
-                return self.parse_json(response)
-
-            if response.status_code in [200, 201]:
-                return self.parse_json(response)
-            else:
-                return self.parse_json(response)
         except ConnectTimeout:
             return 'The request timed out'
         except ConnectionError:
             return "connection not available"
+        else:
+            return self.parse_json(response)
